@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoLab</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- top navigation -->
+    <div class="top">
+        <div class="nav-container">
+            <h1>VideoLab</h1>
+            <input type="text" placeholder="Search" name="query" class="search">
+            <button onclick="login(this)" class="btn">Login</button>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="flex-container">
+
+        <!-- left column -->
+        <div class="col-l">
+
+            <!-- this is a placeholder replace it with a real video -->
+            <figure class="placeholder">
+                
+                    <div class="video">
+                        <video onmouseover="playvideo(this)" onmouseout="pausevideo(this);this.currentTime=0;" width="700" height="400" controls>
+                            <source src="kitty.mp4" type="video/mp4" >
+                            
+                      </video>
+                      </div>
+                    
+               
+            </figure>
+
+            <!-- video info -->
+            <div class="row">
+                <div class="start">
+                    <h1>Kitty</h1>
+                    <h3>1.3K Views | August 17, 2021</h3>
+                    <div class="user">
+                        <img src="assets/user.png" alt="user-circle" class="avatar-s">
+                        <span class="user-name">Varsha Kondappa</span>
+                    </div>
+                </div>
+                <button onclick="subscribe(this)" class="btn">Subscribe</button>
+            </div>
+
+        </div>
+
+        <!-- right column -->
+        <div class="col-r">
+
+            <h3 class="sub-header">Up Next</h3>
+
+            <div class="video-small">
+                <video class="smallvideo" onmouseover="playvideo(this)" onmouseout="pausevideo(this);this.currentTime=0;" width="700" height="400" controls>
+                    <source src="roses.mp4" type="video/mp4" >     
+              </video>
+              <span class="video-title">Beautiful Roses</span>
+            </div>
+
+            <div class="video-small">
+                <video class="smallvideo" onmouseover="playvideo(this)" onmouseout="pausevideo(this);this.currentTime=0;" width="700" height="400" controls>
+                    <source src="fire.mp4" type="video/mp4" >     
+              </video>
+              <span class="video-title">Fire!!!</span>
+            </div>
+
+            <div class="video-small">
+                <video class="smallvideo" onmouseover="playvideo(this)" onmouseout="pausevideo(this);this.currentTime=0;" width="700" height="400" controls>
+                    <source src="dog.mp4" type="video/mp4" >     
+              </video>
+              <span class="video-title">Doggo</span>
+            </div>
+
+            <div class="video-small">
+                <video class="smallvideo" onmouseover="playvideo(this)" onmouseout="pausevideo(this);this.currentTime=0;" width="700" height="400" controls>
+                    <source src="kitty.mp4" type="video/mp4" >     
+              </video>
+              <span class="video-title">Kitty</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
